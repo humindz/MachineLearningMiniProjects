@@ -1,0 +1,164 @@
+Generation 1 - Current best internal CV score: 0.8945945945945948
+
+Generation 2 - Current best internal CV score: 0.8945945945945948
+
+Generation 3 - Current best internal CV score: 0.8945945945945948
+
+Generation 4 - Current best internal CV score: 0.9
+
+Generation 5 - Current best internal CV score: 0.9
+
+Best pipeline: MLPClassifier(SelectPercentile(input_matrix, percentile=57), alpha=0.001, learning_rate_init=0.01)
+
+Generation 1 - Current best internal CV score: 0.8810810810810811
+
+Generation 2 - Current best internal CV score: 0.8810810810810811
+
+Generation 3 - Current best internal CV score: 0.8837837837837839
+
+Generation 4 - Current best internal CV score: 0.8945945945945946
+
+Generation 5 - Current best internal CV score: 0.8945945945945946
+
+Best pipeline: MLPClassifier(CombineDFs(input_matrix, SelectPercentile(input_matrix, percentile=41)), alpha=0.1, learning_rate_init=0.01)
+
+Generation 1 - Current best internal CV score: 0.8868468468468468
+
+Generation 2 - Current best internal CV score: 0.8868468468468468
+
+Generation 3 - Current best internal CV score: 0.8868468468468468
+
+Generation 4 - Current best internal CV score: 0.8922162162162163
+
+Generation 5 - Current best internal CV score: 0.8922162162162163
+
+Best pipeline: MLPClassifier(OneHotEncoder(CombineDFs(input_matrix, RFE(input_matrix, criterion=gini, max_features=0.7000000000000001, n_estimators=100, step=0.6500000000000001)), minimum_fraction=0.2, sparse=False, threshold=10), alpha=0.01, learning_rate_init=0.001)
+
+Generation 1 - Current best internal CV score: 0.8814054054054055
+
+Generation 2 - Current best internal CV score: 0.8814054054054055
+
+Generation 3 - Current best internal CV score: 0.8814414414414415
+
+Generation 4 - Current best internal CV score: 0.8814414414414415
+
+Generation 5 - Current best internal CV score: 0.8814414414414415
+
+Best pipeline: MLPClassifier(input_matrix, alpha=0.1, learning_rate_init=0.01)
+
+Generation 1 - Current best internal CV score: 0.8868468468468469
+
+Generation 2 - Current best internal CV score: 0.8868468468468469
+
+Generation 3 - Current best internal CV score: 0.8868468468468469
+
+Generation 4 - Current best internal CV score: 0.8868468468468469
+
+Generation 5 - Current best internal CV score: 0.8868468468468469
+
+Best pipeline: MLPClassifier(RFE(PCA(input_matrix, iterated_power=8, svd_solver=randomized), criterion=gini, max_features=1.0, n_estimators=100, step=0.9000000000000001), alpha=0.01, learning_rate_init=0.001)
+
+Generation 1 - Current best internal CV score: 0.8841801801801802
+
+Generation 2 - Current best internal CV score: 0.8841801801801802
+
+Generation 3 - Current best internal CV score: 0.8841801801801802
+
+Generation 4 - Current best internal CV score: 0.8869189189189189
+
+Generation 5 - Current best internal CV score: 0.8896216216216217
+
+Best pipeline: MLPClassifier(PCA(input_matrix, iterated_power=8, svd_solver=randomized), alpha=0.1, learning_rate_init=0.01)
+
+Generation 1 - Current best internal CV score: 0.8976576576576576
+
+Generation 2 - Current best internal CV score: 0.9003603603603605
+
+Generation 3 - Current best internal CV score: 0.9003603603603605
+
+Generation 4 - Current best internal CV score: 0.9003603603603605
+
+Generation 5 - Current best internal CV score: 0.903063063063063
+
+Best pipeline: MLPClassifier(CombineDFs(RFE(input_matrix, criterion=gini, max_features=1.0, n_estimators=100, step=0.9000000000000001), input_matrix), alpha=0.1, learning_rate_init=0.01)
+
+Generation 1 - Current best internal CV score: 0.8894774774774774
+
+Generation 2 - Current best internal CV score: 0.8921801801801802
+
+Generation 3 - Current best internal CV score: 0.9003603603603605
+
+Generation 4 - Current best internal CV score: 0.9084324324324324
+
+Generation 5 - Current best internal CV score: 0.9084324324324324
+
+Best pipeline: MLPClassifier(ZeroCount(input_matrix), alpha=0.1, learning_rate_init=0.01)
+
+Generation 1 - Current best internal CV score: 0.886882882882883
+
+Generation 2 - Current best internal CV score: 0.886882882882883
+
+Generation 3 - Current best internal CV score: 0.886882882882883
+
+Generation 4 - Current best internal CV score: 0.886882882882883
+
+Generation 5 - Current best internal CV score: 0.8895135135135135
+
+Best pipeline: MLPClassifier(CombineDFs(input_matrix, Normalizer(input_matrix, norm=l1)), alpha=0.1, learning_rate_init=0.01)
+
+Generation 1 - Current best internal CV score: 0.8814414414414415
+
+Generation 2 - Current best internal CV score: 0.8841441441441441
+
+Generation 3 - Current best internal CV score: 0.8841441441441441
+
+Generation 4 - Current best internal CV score: 0.8894774774774774
+
+Generation 5 - Current best internal CV score: 0.8894774774774774
+
+Best pipeline: MLPClassifier(CombineDFs(input_matrix, Normalizer(input_matrix, norm=l1)), alpha=0.0001, learning_rate_init=0.001)
+WARNING:stopit:Code block execution exceeded 10 seconds timeout
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/stopit/utils.py", line 145, in wrapper
+    result = func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/tpot/decorators.py", line 57, in time_limited_call
+    func(*args)
+  File "/usr/local/lib/python3.8/dist-packages/sklearn/pipeline.py", line 394, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/usr/local/lib/python3.8/dist-packages/sklearn/ensemble/_forest.py", line 450, in fit
+    trees = Parallel(
+  File "/usr/local/lib/python3.8/dist-packages/joblib/parallel.py", line 1088, in __call__
+    while self.dispatch_one_batch(iterator):
+  File "/usr/local/lib/python3.8/dist-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/usr/local/lib/python3.8/dist-packages/joblib/parallel.py", line 819, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/usr/local/lib/python3.8/dist-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/usr/local/lib/python3.8/dist-packages/joblib/_parallel_backends.py", line 597, in __init__
+    self.results = batch()
+  File "/usr/local/lib/python3.8/dist-packages/joblib/parallel.py", line 288, in __call__
+    return [func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/joblib/parallel.py", line 288, in <listcomp>
+    return [func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/sklearn/utils/fixes.py", line 216, in __call__
+    return self.function(*args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/sklearn/ensemble/_forest.py", line 187, in _parallel_build_trees
+    tree.fit(X, y, sample_weight=sample_weight, check_input=False)
+  File "/usr/local/lib/python3.8/dist-packages/sklearn/tree/_classes.py", line 937, in fit
+    super().fit(
+  File "/usr/local/lib/python3.8/dist-packages/sklearn/tree/_classes.py", line 420, in fit
+    builder.build(self.tree_, X, y, sample_weight)
+stopit.utils.TimeoutException
+
+Generation 1 - Current best internal CV score: 0.885836027034969
+
+Generation 2 - Current best internal CV score: 0.885836027034969
+
+Generation 3 - Current best internal CV score: 0.8931237143696737
+
+Generation 4 - Current best internal CV score: 0.8931237143696737
+
+Generation 5 - Current best internal CV score: 0.8931237143696737
+
+Best pipeline: MLPClassifier(RFE(input_matrix, criterion=entropy, max_features=0.9000000000000001, n_estimators=100, step=0.2), alpha=0.1, learning_rate_init=0.001)
