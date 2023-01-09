@@ -1,34 +1,29 @@
-from flask import Flask
+from flask import Flask, jsonify, request
 from flask_restful import Api, Resource
 import pickle
 
 app = Flask(__name__)
 api = Api(app)
 
-text_file = open("input.txt", "r")
-input_news = []
-input_news.append(text_file.read())
-text_file.close()
-
-# print(input_news)
-
+########### Loading Vectorizer for preprocessing ###########
 filename_vectorizer = 'fakeNews_vectorizer.sav'
 loaded_vectorizer = pickle.load(open(filename_vectorizer, 'rb'))
-v_input_news = loaded_vectorizer.transform(input_news)
 
-# print(v_input_news[0])
-
+########### Loading Model for predicting ###########
 filename_model = 'fakeNews_model.sav'
 loaded_model = pickle.load(open(filename_model, 'rb'))
+############################################################
 
-print(loaded_model.predict(v_input_news[0]))
+@app.route('/test', methods=['POST'])
+def test():
+  news_data = []
+  news_data.append(request.json['news'])
+  v_input_news = loaded_vectorizer.transform(news_data)
 
-# class HelloWorld(Resource):
-#   def get(self):
-#     return {"data":"Hello World"}
-
-# api.add_resource(HelloWorld, "/helloworld")
+  print(v_input_news[0])
+  print(loaded_model.predict(v_input_news[0]))
+  return jsonify({'prediction' : loaded_model.predict(v_input_news[0])[0]})
 
 
-# if __name__ == "__main__":
-#   app.run(debug=True)
+if __name__ == "__main__":
+  app.run(debug=True)
