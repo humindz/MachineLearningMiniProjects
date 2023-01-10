@@ -1,0 +1,22 @@
+<p></p>
+<mat-grid-list cols="5" rowHeight="500px">
+  <mat-grid-tile [colspan]="1" [rowspan]="1"> </mat-grid-tile>
+  <mat-grid-tile class="main-card" [colspan]="3" [rowspan]="1">
+    <div class="grid-content">
+      <mat-card>
+        <mat-card-title>
+          <p>Fake news detector!</p>
+        </mat-card-title>
+        <mat-card-content class="card-content">
+          <mat-label>Enter news:</mat-label>
+          <textarea
+            class="main-text-area"
+            matInput
+            placeholder="Fake (or not so fake) news goes here..."
+          ></textarea>
+          <button class="predict-button" mat-stroked-button (click)="predict()">Predict!</button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
