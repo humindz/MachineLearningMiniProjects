@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+// import { FakeNewsDetectionService } from './main-page/api/fake-news-detector.service';
 
 @NgModule({
   declarations: [
@@ -13,10 +15,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MainPageComponent
   ],
   imports: [
+    // FakeNewsDetectionService,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
